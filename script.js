@@ -82,7 +82,7 @@ for(let i= 0;i<pattern.length;i++){
 }
 if(win){
     message.style.display = 'block'
-        message.textContent = `player ${currentplayer} is win`
+        message.textContent = `Player ${currentplayer} is win`
         Active = false
         restart.style.display = "block"
 }
@@ -90,7 +90,7 @@ if(win){
         currentplayer = currentplayer === "X" ? "O" : "X";
         message.textContent = `Player ${currentplayer} is Your Turn`
     }
-    if(!space_chk.includes("")){
+    if(!space_chk.includes("")&&!win){
         Active = false
         msg.textContent = 'Draw'
     }
